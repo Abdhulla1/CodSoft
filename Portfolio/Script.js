@@ -1,5 +1,18 @@
+let menuicon=document.querySelector("#menu-icon");
+let navbar=document.querySelector(".nav");
+
+menuicon.onclick=()=>{
+    menuicon.classList.toggle("bx-x");
+    navbar.classList.toggle("active")
+}
+let subimit=document.querySelector(".subimit-button");
+subimit.onclick=()=>{
+    alert("Got it! 📩 We've received your submission.");
+}
+
 const sections=document.querySelectorAll("section");
 const navlinks=document.querySelectorAll("header nav a");
+
 
 window.onscroll=()=>{
     sections.forEach(sec=>{
@@ -16,6 +29,9 @@ window.onscroll=()=>{
             }
         })
     })
+
+    menuicon.classList.remove("bx-x");
+    navbar.classList.remove("active");
 }
 ScrollReveal({
     reset:true,
